@@ -11,7 +11,7 @@ The analysis covers:
 - **Segment Profiling:** Each cluster characterized by tenure, service usage, and monthly charges to support targeted retention strategies.
 
 > **Note on Dataset Availability**
-> The dataset (`churn_clean.csv`) has been removed from this repository as it is proprietary and cannot be shared publicly. All visualizations and outputs generated during the analysis are retained in the `output/` folder for reference and presentation purposes.
+> The dataset (`churn_clean.csv`) has been removed from this repository as it is proprietary and cannot be shared publicly. All visualizations and outputs generated during the analysis are retained in the `Figures/` folder for reference and presentation purposes.
 
 ---
 
@@ -56,13 +56,13 @@ Linkage distances were extracted and consecutive differences analyzed to find si
 
 | Dendrogram |
 |---|
-| _placeholder_ |
+| ![Dendrogram](Figures/DendrogramPlot.jpg) |
 
 ### Cluster Visualization (PCA Projection)
 
 | PCA Cluster Plot |
 |---|
-| _placeholder_ |
+| ![Clusters](Figures/Clusters.jpg) |
 
 ### Cluster Profiles
 
@@ -74,9 +74,6 @@ Linkage distances were extracted and consecutive differences analyzed to find si
 
 > Streaming service usage emerged as the key differentiator between clusters 2 and 3. Contract type, internet service, and payment method showed minimal variation across clusters — behavioral variables drive segmentation more than account configuration.
 
-| Cluster Feature Distributions |
-|---|
-| _placeholder_ |
 
 ---
 
@@ -107,7 +104,7 @@ project/
 python main.py
 ```
 
-The script handles all preprocessing, Gower distance computation, hierarchical clustering, cluster selection, PCA visualization, and profiling automatically. All outputs are saved to the `output/` folder.
+The script handles all preprocessing, Gower distance computation, hierarchical clustering, cluster selection, PCA visualization, and profiling automatically. All outputs are saved to the `Figures/` folder.
 
 ---
 
@@ -116,7 +113,7 @@ The script handles all preprocessing, Gower distance computation, hierarchical c
 ```
 project/
 ├── data/                            # Raw dataset (not included — see note above)
-├── output/                          # Dendrogram, PCA plot, cluster profiles, cleaned CSV
+├── Figures/                          # Dendrogram, PCA plot, cluster profiles, cleaned CSV
 │   └── cleaned_churn_data.csv
 ├── main.py                          # Entry point — run this
 ├── requirements.txt
